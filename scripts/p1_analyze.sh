@@ -20,7 +20,7 @@ RESULT_LINEAR="results/p1_analyze_linear.csv"
 PUBS_ROOT="data/pubs"
 TMP_LOG="logs/tmp.log"
 
-BATCH_SIZE=128
+BATCH_SIZE=32
 
 echo "dataset,num_queries,batch_size,total_time,num_errors,throughput" > $RESULT_BATCH
 
@@ -48,7 +48,7 @@ for dataset_type in "${DATASET_TYPES[@]}"; do
 
         if [ "$dataset_type" == "glove.840B.300d" ] && [ "$size" == "big" ]; then
             total_time="SKIPPED"
-            throughput=0
+            throughput="SKIPPED"
             errors="SKIPPED"
         else
             apptainer exec \

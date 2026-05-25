@@ -5,11 +5,6 @@ starting run: glove.6B.50d, size=small
 starting run: glove.6B.50d, size=medium
 starting run: glove.6B.50d, size=big
 starting run: glove.840B.300d, size=small
-/var/spool/slurmd/job218242/slurm_script: line 28: 3134078 Killed                  apptainer exec --bind "$HOME" --bind "$glove_dataset:$BASE_DIR/data/glove" --bind "$pubs_dataset:$BASE_DIR/data/pubs" $container bash -c "src/assignment7_problem1.py --dataset $DATASET --queries $QUERIES --labels $LABELS --batch-size $BATCH_SIZE;" > $TMP_LOG
 starting run: glove.840B.300d, size=medium
-/var/spool/slurmd/job218242/slurm_script: line 28: 3136936 Killed                  apptainer exec --bind "$HOME" --bind "$glove_dataset:$BASE_DIR/data/glove" --bind "$pubs_dataset:$BASE_DIR/data/pubs" $container bash -c "src/assignment7_problem1.py --dataset $DATASET --queries $QUERIES --labels $LABELS --batch-size $BATCH_SIZE;" > $TMP_LOG
-awk: fatal: cannot open file `logs/tmp.log' for reading: No such file or directory
-awk: fatal: cannot open file `logs/tmp.log' for reading: No such file or directory
-awk: fatal: cannot open file `logs/tmp.log' for reading: No such file or directory
 starting run: glove.840B.300d, size=big
 completed, results can be found in results/p1_analyze_batch.csv
