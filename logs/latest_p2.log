@@ -1,0 +1,34 @@
+batch size used:  128
+Traceback (most recent call last):
+  File "/data/users/timca/a7-gpu/src/assignment7_problem2.py", line 146, in <module>
+    I_device = batch_scan(X_dev,Q_dev,args.batch_size)
+  File "/data/users/timca/a7-gpu/src/assignment7_problem2.py", line 44, in batch_scan
+    I[i : i + batch_size] = cp.argmin(squared_distances, axis=1)
+                            ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/conda/lib/python3.13/site-packages/cupy/_sorting/search.py", line 94, in argmin
+    return a.argmin(axis=axis, dtype=dtype, out=out, keepdims=keepdims)
+           ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "cupy/_core/core.pyx", line 1250, in cupy._core.core._ndarray_base.argmin
+  File "cupy/_core/core.pyx", line 1267, in cupy._core.core._ndarray_base.argmin
+  File "cupy/_core/_routines_statistics.pyx", line 125, in cupy._core._routines_statistics._ndarray_argmin
+  File "cupy/_core/_reduction.pyx", line 621, in cupy._core._reduction._SimpleReductionKernel.__call__
+  File "cupy/_core/_reduction.pyx", line 382, in cupy._core._reduction._AbstractReductionKernel._call
+  File "cupy/_core/_cub_reduction.pyx", line 701, in cupy._core._cub_reduction._try_to_call_cub_reduction
+  File "cupy/_core/_cub_reduction.pyx", line 552, in cupy._core._cub_reduction._launch_cub
+  File "cupy/_util.pyx", line 68, in cupy._util.memoize.decorator.ret
+  File "cupy/_core/_cub_reduction.pyx", line 251, in cupy._core._cub_reduction._SimpleCubReductionKernel_get_cached_function
+  File "cupy/_core/_cub_reduction.pyx", line 234, in cupy._core._cub_reduction._create_cub_reduction_function
+  File "cupy/_core/core.pyx", line 2552, in cupy._core.core.compile_with_cache
+  File "/opt/conda/lib/python3.13/site-packages/cupy/cuda/compiler.py", line 566, in _compile_module_with_cache
+    return _compile_with_cache_cuda(
+        source, options, arch, cache_dir, extra_source, backend,
+        enable_cooperative_groups, name_expressions, log_stream,
+        cache_in_memory, jitify, to_ltoir)
+  File "/opt/conda/lib/python3.13/site-packages/cupy/cuda/compiler.py", line 651, in _compile_with_cache_cuda
+    mod.load(cubin)
+    ~~~~~~~~^^^^^^^
+  File "cupy/cuda/function.pyx", line 187, in cupy.cuda.function.Module.load
+  File "cupy/cuda/function.pyx", line 189, in cupy.cuda.function.Module.load
+  File "cupy_backends/cuda/api/driver.pyx", line 226, in cupy_backends.cuda.api.driver.moduleLoadData
+  File "cupy_backends/cuda/api/driver.pyx", line 63, in cupy_backends.cuda.api.driver.check_status
+cupy_backends.cuda.api.driver.CUDADriverError: CUDA_ERROR_ILLEGAL_ADDRESS: an illegal memory access was encountered

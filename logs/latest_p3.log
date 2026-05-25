@@ -1,0 +1,4 @@
+Loading dataset (2196017 vectors of length 300) took 49.46140503883362
+Performing 100 NN queries took 2.7844433784484863
+Throughput 35.91382061276491
+Number of erroneous queries: 0

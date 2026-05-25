@@ -1,0 +1,6 @@
+Loading dataset (400000 vectors of length 50) took 2.178765296936035
+Performing 1000 NN queries took 26.31323480606079
+Throughput 38.00368929819558
+Number of erroneous queries: 0
+Transfer data from host to device: 0.06861352920532227
+Transfer data from device to host: 0.00015282630920410156
