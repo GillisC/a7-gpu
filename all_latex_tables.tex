@@ -1,0 +1,136 @@
+% ==========================================================
+% AUTOMATICALLY GENERATED LATEX TABLES FOR ASSIGNMENT 7
+% ==========================================================
+
+% --- Table for ../results/p1_analyze_linear.csv ---
+\begin{table}[htbp]
+  \centering
+  \caption{Performance Results: Linear Scan (Baseline CPU)}
+  \label{tab:}
+  \resizebox{\textwidth}{!}{%
+    \begin{tabular}{l | c c c c c}
+    Dataset & Num Queries & Batch Size & Total Time & Num Errors & Throughput \\
+    \hline
+    pubs & 100 & 256 & 8.1849 & 0 & 12.2177 \\
+    pubs & 1,000 & 256 & 56.0636 & 0 & 17.8369 \\
+    pubs & 10,000 & 256 & 573.8449 & 0 & 17.4263 \\
+    glove.6B.50d & 100 & 256 & 50.7984 & 0 & 1.9686 \\
+    glove.6B.50d & 1,000 & 256 & 479.8237 & 0 & 2.0841 \\
+    glove.6B.50d & 10,000 & 256 & 4848.9121 & 0 & 2.0623 \\
+    glove.840B.300d & 100 & 256 & 301.2816 & 0 & 0.3319 \\
+    glove.840B.300d & 1,000 & 256 & 2937.3963 & 0 & 0.3404 \\
+    glove.840B.300d & 10,000 & 256 & \textit{Skipped} & \textit{Skipped} & 0 \\
+    \end{tabular}%
+  }
+\end{table}
+
+% --- Table for ../results/p1_analyze_batch.csv ---
+\begin{table}[htbp]
+  \centering
+  \caption{Performance Results: Batching (NumPy CPU)}
+  \label{tab:}
+  \resizebox{\textwidth}{!}{%
+    \begin{tabular}{l | c c c c c}
+    Dataset & Num Queries & Batch Size & Total Time & Num Errors & Throughput \\
+    \hline
+    pubs & 100 & 32 & 0.1296 & 0 & 771.6174 \\
+    pubs & 1,000 & 32 & 1.0427 & 0 & 959.0126 \\
+    pubs & 10,000 & 32 & 10.3923 & 0 & 962.2529 \\
+    glove.6B.50d & 100 & 32 & 5.7159 & 0 & 17.4952 \\
+    glove.6B.50d & 1,000 & 32 & 49.9718 & 0 & 20.0113 \\
+    glove.6B.50d & 10,000 & 32 & 481.9784 & 0 & 20.7478 \\
+    glove.840B.300d & 100 & 32 & 399.6817 & 0 & 0.2502 \\
+    glove.840B.300d & 1,000 & 32 & 2774.2571 & 0 & 0.3605 \\
+    glove.840B.300d & 10,000 & 32 & \textit{Skipped} & \textit{Skipped} & \textit{Skipped} \\
+    \end{tabular}%
+  }
+\end{table}
+
+% --- Table for ../results/p2_analyze.csv ---
+\begin{table}[htbp]
+  \centering
+  \caption{Performance Results: Batching (CuPy GPU)}
+  \label{tab:}
+  \resizebox{\textwidth}{!}{%
+    \begin{tabular}{l | c c c c c c c}
+    Dataset & Num Queries & Batch Size & Total Time & Host To Device & Device To Host & Num Errors & Throughput \\
+    \hline
+    pubs & 100 & 16 & 1.8813 & 0.0114 & $9.87 \times 10^{-5}$ & 0 & 53.1548 \\
+    pubs & 1,000 & 16 & 1.7562 & 0.0114 & $1.08 \times 10^{-4}$ & 0 & 569.4128 \\
+    pubs & 10,000 & 16 & 2.5395 & 0.0116 & $1.45 \times 10^{-4}$ & 0 & 3937.7309 \\
+    glove.6B.50d & 100 & 16 & 1.7119 & 0.0668 & $1.92 \times 10^{-4}$ & 0 & 58.4143 \\
+    glove.6B.50d & 1,000 & 16 & 3.8717 & 0.0665 & $2.10 \times 10^{-4}$ & 0 & 258.2843 \\
+    glove.6B.50d & 10,000 & 16 & 25.5485 & 0.0664 & $2.06 \times 10^{-4}$ & 0 & 391.4125 \\
+    glove.840B.300d & 100 & 16 & \textit{Skipped} & \textit{Skipped} & \textit{Skipped} & \textit{Skipped} & \textit{Skipped} \\
+    glove.840B.300d & 1,000 & 16 & \textit{Skipped} & \textit{Skipped} & \textit{Skipped} & \textit{Skipped} & \textit{Skipped} \\
+    glove.840B.300d & 10,000 & 16 & \textit{Skipped} & \textit{Skipped} & \textit{Skipped} & \textit{Skipped} & \textit{Skipped} \\
+    \end{tabular}%
+  }
+\end{table}
+
+% --- Table for ../results/p3_analyze.csv ---
+\begin{table}[htbp]
+  \centering
+  \caption{Performance Results: Matrix Multiplication Memory Optimization (NumPy CPU)}
+  \label{tab:}
+  \resizebox{\textwidth}{!}{%
+    \begin{tabular}{l | c c c c c}
+    Dataset & Num Queries & Batch Size & Total Time & Num Errors & Throughput \\
+    \hline
+    pubs & 100 & 128 & 0.0713 & 18 & 1402.5286 \\
+    pubs & 1,000 & 128 & 0.4288 & 145 & 2331.9295 \\
+    pubs & 10,000 & 128 & 3.8412 & 1,657 & 2603.3538 \\
+    glove.6B.50d & 100 & 128 & 0.4304 & 0 & 232.3462 \\
+    glove.6B.50d & 1,000 & 128 & 4.9841 & 0 & 200.6375 \\
+    glove.6B.50d & 10,000 & 128 & 49.6792 & 0 & 201.2916 \\
+    glove.840B.300d & 100 & 128 & 3.0630 & 0 & 32.6482 \\
+    glove.840B.300d & 1,000 & 128 & 24.8654 & 0 & 40.2164 \\
+    glove.840B.300d & 10,000 & 128 & 247.9285 & 0 & 40.3342 \\
+    \end{tabular}%
+  }
+\end{table}
+
+% --- Table for ../results/p4_analyze.csv ---
+\begin{table}[htbp]
+  \centering
+  \caption{Performance Results: Matrix Multiplication Memory Optimization  (CuPy GPU)}
+  \label{tab:}
+  \resizebox{\textwidth}{!}{%
+    \begin{tabular}{l | c c c c c c c}
+    Dataset & Num Queries & Batch Size & Total Time & Host To Device & Device To Host & Num Errors & Throughput \\
+    \hline
+    pubs & 100 & 128 & 6.6277 & 0.0109 & $1.06 \times 10^{-4}$ & 18 & 15.0882 \\
+    pubs & 1,000 & 128 & 2.6577 & 0.0109 & $8.42 \times 10^{-5}$ & 143 & 376.2669 \\
+    pubs & 10,000 & 128 & 2.7664 & 0.0110 & $8.34 \times 10^{-5}$ & 1,648 & 3614.8176 \\
+    glove.6B.50d & 100 & 128 & 2.6479 & 0.0701 & $8.87 \times 10^{-5}$ & 0 & 37.7651 \\
+    glove.6B.50d & 1,000 & 128 & 2.7686 & 0.0670 & $7.75 \times 10^{-5}$ & 0 & 361.1920 \\
+    glove.6B.50d & 10,000 & 128 & 4.1309 & 0.0687 & $1.52 \times 10^{-4}$ & 0 & 2420.7791 \\
+    glove.840B.300d & 100 & 128 & 2.3563 & 1.3824 & $5.77 \times 10^{-5}$ & 0 & 42.4392 \\
+    glove.840B.300d & 1,000 & 128 & 3.2881 & 1.4034 & $8.44 \times 10^{-5}$ & 0 & 304.1277 \\
+    glove.840B.300d & 10,000 & 128 & 12.2696 & 1.6471 & $2.86 \times 10^{-4}$ & 0 & 815.0219 \\
+    \end{tabular}%
+  }
+\end{table}
+
+% --- Table for ../results/p5_analyze.csv ---
+\begin{table}[htbp]
+  \centering
+  \caption{Performance Results: CUVS Baseline Implementation}
+  \label{tab:}
+  \resizebox{\textwidth}{!}{%
+    \begin{tabular}{l | c c c c c c c}
+    Dataset & Num Queries & Batch Size & Total Time & Host To Device & Device To Host & Num Errors & Throughput \\
+    \hline
+    pubs & 100 & 128 & 1.6068 & 0.0112 & $1.47 \times 10^{-4}$ & 21 & 62.2349 \\
+    pubs & 1,000 & 128 & 1.6367 & 0.0112 & $1.41 \times 10^{-4}$ & 156 & 610.9672 \\
+    pubs & 10,000 & 128 & 1.6356 & 0.0107 & $2.77 \times 10^{-4}$ & 1,731 & 6113.8392 \\
+    glove.6B.50d & 100 & 128 & 1.6111 & 0.0681 & $1.59 \times 10^{-4}$ & 0 & 62.0691 \\
+    glove.6B.50d & 1,000 & 128 & 1.6246 & 0.0666 & $1.52 \times 10^{-4}$ & 0 & 615.5179 \\
+    glove.6B.50d & 10,000 & 128 & 1.7858 & 0.0678 & $1.89 \times 10^{-4}$ & 0 & 5599.5795 \\
+    glove.840B.300d & 100 & 128 & 1.6864 & 1.3997 & $1.71 \times 10^{-4}$ & 0 & 59.2986 \\
+    glove.840B.300d & 1,000 & 128 & 2.2562 & 1.3836 & $1.64 \times 10^{-4}$ & 0 & 443.2174 \\
+    glove.840B.300d & 10,000 & 128 & 6.7769 & 1.3826 & $1.87 \times 10^{-4}$ & 0 & 1475.5929 \\
+    \end{tabular}%
+  }
+\end{table}
+
