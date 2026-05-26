@@ -8,7 +8,7 @@ import csv
 import sys
 import time
 
-def batch_scan(X, Q, b = None):
+def batch_scan_matrix_mul_cupy(X, Q, b = None):
     """
     Perform linear scan for querying nearest neighbor using cupy.
     X: n*d dataset (in device memory)
@@ -143,7 +143,7 @@ if __name__ == '__main__':
     cp.cuda.Device().synchronize() # wait
     t8 = time.time()
     # Get the scan measurement time
-    I_device = batch_scan(X_dev,Q_dev,args.batch_size)
+    I_device = batch_scan_matrix_mul_cupy(X_dev,Q_dev,args.batch_size)
 
     cp.cuda.Device().synchronize() # wait
     t9 = time.time()

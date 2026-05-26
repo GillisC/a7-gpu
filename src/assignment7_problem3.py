@@ -8,7 +8,7 @@ import csv
 import sys
 import time
 
-def batch_scan(X, Q, b = None):
+def batch_scan_matrix_mul(X, Q, b = None):
     """
     X: n*d dataset (in host memory)
     Q: m*d queries (in host memory)
@@ -134,7 +134,7 @@ if __name__ == '__main__':
 
     t6 = time.time()
 
-    I = batch_scan(X, Q, args.batch_size)
+    I = batch_scan_matrix_mul(X, Q, args.batch_size)
 
     t7 = time.time()
 

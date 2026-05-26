@@ -12,10 +12,10 @@ pubs_dataset="/data/courses/2026_dat471_dit066/datasets/pubs"
 
 mkdir -p $BASE_DIR/data/glove $BASE_DIR/data/pubs
 
-DATASET_TYPES=("pubs" "glove.6B.50d")
+DATASET_TYPES=("pubs" "glove.6B.50d" "glove.840B.300d")
 SIZES=("small" "medium" "big")
 
-BATCH_SIZE=256
+BATCH_SIZE=16
 
 RESULT="results/p2_analyze.csv"
 

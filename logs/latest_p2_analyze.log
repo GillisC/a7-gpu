@@ -1,109 +1,121 @@
 starting run: pubs, size=small
 content of the log:
-batch size used:  256
-Loading dataset (46988 vectors of length 2) took 0.21754670143127441
-Performing 100 NN queries took 1.643172025680542
-Throughput 60.85790071711064
+batch size used:  16
+Loading dataset (46988 vectors of length 2) took 0.22793793678283691
+Performing 100 NN queries took 1.8812963962554932
+Throughput 53.154835250329846
 Number of erroneous queries: 0
-Transfer data from host to device: 0.010982036590576172
-Transfer data from device to host: 9.679794311523438e-05
+Transfer data from host to device: 0.011366128921508789
+Transfer data from device to host: 9.870529174804688e-05
 starting run: pubs, size=medium
 content of the log:
-batch size used:  256
-Loading dataset (46988 vectors of length 2) took 0.19374656677246094
-Performing 1000 NN queries took 1.641761064529419
-Throughput 609.1020317177712
+batch size used:  16
+Loading dataset (46988 vectors of length 2) took 0.21477770805358887
+Performing 1000 NN queries took 1.756195068359375
+Throughput 569.4128277755574
 Number of erroneous queries: 0
-Transfer data from host to device: 0.01012873649597168
-Transfer data from device to host: 6.4849853515625e-05
+Transfer data from host to device: 0.011431455612182617
+Transfer data from device to host: 0.00010824203491210938
 starting run: pubs, size=big
 content of the log:
-batch size used:  256
-Loading dataset (46988 vectors of length 2) took 0.2250680923461914
-Performing 10000 NN queries took 1.9923977851867676
-Throughput 5019.078054768365
+batch size used:  16
+Loading dataset (46988 vectors of length 2) took 0.2160346508026123
+Performing 10000 NN queries took 2.5395336151123047
+Throughput 3937.7309047975623
 Number of erroneous queries: 0
-Transfer data from host to device: 0.012245416641235352
-Transfer data from device to host: 0.00012636184692382812
+Transfer data from host to device: 0.011560440063476562
+Transfer data from device to host: 0.00014472007751464844
 starting run: glove.6B.50d, size=small
 content of the log:
-batch size used:  256
-Loading dataset (400000 vectors of length 50) took 2.067671775817871
-Performing 100 NN queries took 1.6220228672027588
-Throughput 61.65141196341693
+batch size used:  16
+Loading dataset (400000 vectors of length 50) took 2.063267707824707
+Performing 100 NN queries took 1.7119107246398926
+Throughput 58.414261071374156
 Number of erroneous queries: 0
-Transfer data from host to device: 0.0633697509765625
-Transfer data from device to host: 8.702278137207031e-05
+Transfer data from host to device: 0.0668022632598877
+Transfer data from device to host: 0.00019216537475585938
 starting run: glove.6B.50d, size=medium
-Traceback (most recent call last):
-  File "/data/users/timca/a7-gpu/src/assignment7_problem2.py", line 146, in <module>
-    I_device = batch_scan(X_dev,Q_dev,args.batch_size)
-  File "/data/users/timca/a7-gpu/src/assignment7_problem2.py", line 44, in batch_scan
-    I[i : i + batch_size] = cp.argmin(squared_distances, axis=1)
-                            ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/lib/python3.13/site-packages/cupy/_sorting/search.py", line 94, in argmin
-    return a.argmin(axis=axis, dtype=dtype, out=out, keepdims=keepdims)
-           ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "cupy/_core/core.pyx", line 1250, in cupy._core.core._ndarray_base.argmin
-  File "cupy/_core/core.pyx", line 1267, in cupy._core.core._ndarray_base.argmin
-  File "cupy/_core/_routines_statistics.pyx", line 125, in cupy._core._routines_statistics._ndarray_argmin
-  File "cupy/_core/_reduction.pyx", line 621, in cupy._core._reduction._SimpleReductionKernel.__call__
-  File "cupy/_core/_reduction.pyx", line 382, in cupy._core._reduction._AbstractReductionKernel._call
-  File "cupy/_core/_cub_reduction.pyx", line 701, in cupy._core._cub_reduction._try_to_call_cub_reduction
-  File "cupy/_core/_cub_reduction.pyx", line 552, in cupy._core._cub_reduction._launch_cub
-  File "cupy/_util.pyx", line 68, in cupy._util.memoize.decorator.ret
-  File "cupy/_core/_cub_reduction.pyx", line 251, in cupy._core._cub_reduction._SimpleCubReductionKernel_get_cached_function
-  File "cupy/_core/_cub_reduction.pyx", line 234, in cupy._core._cub_reduction._create_cub_reduction_function
-  File "cupy/_core/core.pyx", line 2552, in cupy._core.core.compile_with_cache
-  File "/opt/conda/lib/python3.13/site-packages/cupy/cuda/compiler.py", line 566, in _compile_module_with_cache
-    return _compile_with_cache_cuda(
-        source, options, arch, cache_dir, extra_source, backend,
-        enable_cooperative_groups, name_expressions, log_stream,
-        cache_in_memory, jitify, to_ltoir)
-  File "/opt/conda/lib/python3.13/site-packages/cupy/cuda/compiler.py", line 651, in _compile_with_cache_cuda
-    mod.load(cubin)
-    ~~~~~~~~^^^^^^^
-  File "cupy/cuda/function.pyx", line 187, in cupy.cuda.function.Module.load
-  File "cupy/cuda/function.pyx", line 189, in cupy.cuda.function.Module.load
-  File "cupy_backends/cuda/api/driver.pyx", line 226, in cupy_backends.cuda.api.driver.moduleLoadData
-  File "cupy_backends/cuda/api/driver.pyx", line 63, in cupy_backends.cuda.api.driver.check_status
-cupy_backends.cuda.api.driver.CUDADriverError: CUDA_ERROR_ILLEGAL_ADDRESS: an illegal memory access was encountered
 content of the log:
-batch size used:  256
+batch size used:  16
+Loading dataset (400000 vectors of length 50) took 2.0472915172576904
+Performing 1000 NN queries took 3.871701955795288
+Throughput 258.2843440474977
+Number of erroneous queries: 0
+Transfer data from host to device: 0.06651878356933594
+Transfer data from device to host: 0.000209808349609375
 starting run: glove.6B.50d, size=big
+content of the log:
+batch size used:  16
+Loading dataset (400000 vectors of length 50) took 2.0419344902038574
+Performing 10000 NN queries took 25.54849147796631
+Throughput 391.41254224830703
+Number of erroneous queries: 0
+Transfer data from host to device: 0.06644248962402344
+Transfer data from device to host: 0.00020599365234375
+starting run: glove.840B.300d, size=small
 Traceback (most recent call last):
   File "/data/users/timca/a7-gpu/src/assignment7_problem2.py", line 146, in <module>
-    I_device = batch_scan(X_dev,Q_dev,args.batch_size)
-  File "/data/users/timca/a7-gpu/src/assignment7_problem2.py", line 44, in batch_scan
-    I[i : i + batch_size] = cp.argmin(squared_distances, axis=1)
-                            ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/conda/lib/python3.13/site-packages/cupy/_sorting/search.py", line 94, in argmin
-    return a.argmin(axis=axis, dtype=dtype, out=out, keepdims=keepdims)
-           ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "cupy/_core/core.pyx", line 1250, in cupy._core.core._ndarray_base.argmin
-  File "cupy/_core/core.pyx", line 1267, in cupy._core.core._ndarray_base.argmin
-  File "cupy/_core/_routines_statistics.pyx", line 125, in cupy._core._routines_statistics._ndarray_argmin
-  File "cupy/_core/_reduction.pyx", line 621, in cupy._core._reduction._SimpleReductionKernel.__call__
-  File "cupy/_core/_reduction.pyx", line 382, in cupy._core._reduction._AbstractReductionKernel._call
-  File "cupy/_core/_cub_reduction.pyx", line 701, in cupy._core._cub_reduction._try_to_call_cub_reduction
-  File "cupy/_core/_cub_reduction.pyx", line 552, in cupy._core._cub_reduction._launch_cub
-  File "cupy/_util.pyx", line 68, in cupy._util.memoize.decorator.ret
-  File "cupy/_core/_cub_reduction.pyx", line 251, in cupy._core._cub_reduction._SimpleCubReductionKernel_get_cached_function
-  File "cupy/_core/_cub_reduction.pyx", line 234, in cupy._core._cub_reduction._create_cub_reduction_function
-  File "cupy/_core/core.pyx", line 2552, in cupy._core.core.compile_with_cache
-  File "/opt/conda/lib/python3.13/site-packages/cupy/cuda/compiler.py", line 566, in _compile_module_with_cache
-    return _compile_with_cache_cuda(
-        source, options, arch, cache_dir, extra_source, backend,
-        enable_cooperative_groups, name_expressions, log_stream,
-        cache_in_memory, jitify, to_ltoir)
-  File "/opt/conda/lib/python3.13/site-packages/cupy/cuda/compiler.py", line 651, in _compile_with_cache_cuda
-    mod.load(cubin)
-    ~~~~~~~~^^^^^^^
-  File "cupy/cuda/function.pyx", line 187, in cupy.cuda.function.Module.load
-  File "cupy/cuda/function.pyx", line 189, in cupy.cuda.function.Module.load
-  File "cupy_backends/cuda/api/driver.pyx", line 226, in cupy_backends.cuda.api.driver.moduleLoadData
-  File "cupy_backends/cuda/api/driver.pyx", line 63, in cupy_backends.cuda.api.driver.check_status
-cupy_backends.cuda.api.driver.CUDADriverError: CUDA_ERROR_ILLEGAL_ADDRESS: an illegal memory access was encountered
+    I_device = batch_scan_cupy(X_dev,Q_dev,args.batch_size)
+  File "/data/users/timca/a7-gpu/src/assignment7_problem2.py", line 41, in batch_scan_cupy
+    differences = batch_of_queries[:, cp.newaxis, :] - X
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+  File "cupy/_core/core.pyx", line 1497, in cupy._core.core._ndarray_base.__sub__
+  File "cupy/_core/_kernel.pyx", line 1357, in cupy._core._kernel.ufunc.__call__
+  File "cupy/_core/_kernel.pyx", line 636, in cupy._core._kernel._get_out_args_from_optionals
+  File "cupy/_core/core.pyx", line 3157, in cupy._core.core._ndarray_init
+  File "cupy/_core/core.pyx", line 297, in cupy._core.core._ndarray_base._init_fast
+  File "cupy/cuda/memory.pyx", line 877, in cupy.cuda.memory.alloc
+  File "cupy/cuda/memory.pyx", line 1622, in cupy.cuda.memory.MemoryPool.malloc
+  File "cupy/cuda/memory.pyx", line 1643, in cupy.cuda.memory.MemoryPool.malloc
+  File "cupy/cuda/memory.pyx", line 1290, in cupy.cuda.memory.SingleDeviceMemoryPool.malloc
+  File "cupy/cuda/memory.pyx", line 1311, in cupy.cuda.memory.SingleDeviceMemoryPool._malloc
+  File "cupy/cuda/memory.pyx", line 1566, in cupy.cuda.memory.SingleDeviceMemoryPool._try_malloc
+  File "cupy/cuda/memory.pyx", line 1569, in cupy.cuda.memory.SingleDeviceMemoryPool._try_malloc
+cupy.cuda.memory.OutOfMemoryError: Out of memory allocating 42,163,526,656 bytes (allocated so far: 2,635,341,824 bytes).
 content of the log:
-batch size used:  256
+batch size used:  16
+starting run: glove.840B.300d, size=medium
+Traceback (most recent call last):
+  File "/data/users/timca/a7-gpu/src/assignment7_problem2.py", line 146, in <module>
+    I_device = batch_scan_cupy(X_dev,Q_dev,args.batch_size)
+  File "/data/users/timca/a7-gpu/src/assignment7_problem2.py", line 41, in batch_scan_cupy
+    differences = batch_of_queries[:, cp.newaxis, :] - X
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+  File "cupy/_core/core.pyx", line 1497, in cupy._core.core._ndarray_base.__sub__
+  File "cupy/_core/_kernel.pyx", line 1357, in cupy._core._kernel.ufunc.__call__
+  File "cupy/_core/_kernel.pyx", line 636, in cupy._core._kernel._get_out_args_from_optionals
+  File "cupy/_core/core.pyx", line 3157, in cupy._core.core._ndarray_init
+  File "cupy/_core/core.pyx", line 297, in cupy._core.core._ndarray_base._init_fast
+  File "cupy/cuda/memory.pyx", line 877, in cupy.cuda.memory.alloc
+  File "cupy/cuda/memory.pyx", line 1622, in cupy.cuda.memory.MemoryPool.malloc
+  File "cupy/cuda/memory.pyx", line 1643, in cupy.cuda.memory.MemoryPool.malloc
+  File "cupy/cuda/memory.pyx", line 1290, in cupy.cuda.memory.SingleDeviceMemoryPool.malloc
+  File "cupy/cuda/memory.pyx", line 1311, in cupy.cuda.memory.SingleDeviceMemoryPool._malloc
+  File "cupy/cuda/memory.pyx", line 1566, in cupy.cuda.memory.SingleDeviceMemoryPool._try_malloc
+  File "cupy/cuda/memory.pyx", line 1569, in cupy.cuda.memory.SingleDeviceMemoryPool._try_malloc
+cupy.cuda.memory.OutOfMemoryError: Out of memory allocating 42,163,526,656 bytes (allocated so far: 2,636,428,800 bytes).
+content of the log:
+batch size used:  16
+starting run: glove.840B.300d, size=big
+Traceback (most recent call last):
+  File "/data/users/timca/a7-gpu/src/assignment7_problem2.py", line 146, in <module>
+    I_device = batch_scan_cupy(X_dev,Q_dev,args.batch_size)
+  File "/data/users/timca/a7-gpu/src/assignment7_problem2.py", line 41, in batch_scan_cupy
+    differences = batch_of_queries[:, cp.newaxis, :] - X
+                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~
+  File "cupy/_core/core.pyx", line 1497, in cupy._core.core._ndarray_base.__sub__
+  File "cupy/_core/_kernel.pyx", line 1357, in cupy._core._kernel.ufunc.__call__
+  File "cupy/_core/_kernel.pyx", line 636, in cupy._core._kernel._get_out_args_from_optionals
+  File "cupy/_core/core.pyx", line 3157, in cupy._core.core._ndarray_init
+  File "cupy/_core/core.pyx", line 297, in cupy._core.core._ndarray_base._init_fast
+  File "cupy/cuda/memory.pyx", line 877, in cupy.cuda.memory.alloc
+  File "cupy/cuda/memory.pyx", line 1622, in cupy.cuda.memory.MemoryPool.malloc
+  File "cupy/cuda/memory.pyx", line 1643, in cupy.cuda.memory.MemoryPool.malloc
+  File "cupy/cuda/memory.pyx", line 1290, in cupy.cuda.memory.SingleDeviceMemoryPool.malloc
+  File "cupy/cuda/memory.pyx", line 1311, in cupy.cuda.memory.SingleDeviceMemoryPool._malloc
+  File "cupy/cuda/memory.pyx", line 1566, in cupy.cuda.memory.SingleDeviceMemoryPool._try_malloc
+  File "cupy/cuda/memory.pyx", line 1569, in cupy.cuda.memory.SingleDeviceMemoryPool._try_malloc
+cupy.cuda.memory.OutOfMemoryError: Out of memory allocating 42,163,526,656 bytes (allocated so far: 2,647,301,120 bytes).
+content of the log:
+batch size used:  16
 completed, results can be found in results/p2_analyze.csv

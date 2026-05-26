@@ -9,7 +9,7 @@ import sys
 import time
 from cuvs.neighbors import brute_force
 
-def batch_scan(X, Q, b = None):
+def scan_cuvs_knn(X, Q, b = None):
     """
     Perform nearest neighbor search using CUVS library's `knn` routine
     
@@ -128,7 +128,7 @@ if __name__ == '__main__':
     cp.cuda.Device().synchronize() # wait
     t8 = time.time()
     # Get the scan measurement time
-    I_device = batch_scan(X_dev,Q_dev,args.batch_size)
+    I_device = scan_cuvs_knn(X_dev,Q_dev,args.batch_size)
 
     cp.cuda.Device().synchronize() # wait
     t9 = time.time()
